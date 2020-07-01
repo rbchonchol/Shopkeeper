@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->integer('brand_id');
             $table->integer('label_id');
+            $table->integer('category_id');
             $table->string('title');
             $table->string('picture')->nullable();
             $table->text('short_description');
@@ -24,6 +25,7 @@ class CreateProductsTable extends Migration
             $table->integer('totoal_sels');
             $table->string('product_type');
             $table->unsignedBigInteger('is_new')->default(1);
+            $table->integer('stock')->nullable();
             $table->float('cost');
             $table->float('mrp');
             $table->float('special_price');
